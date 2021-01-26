@@ -1,17 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import db from '../db.json';
-import Widget from '../src/components/Widget'
-import QuizLogo from '../src/components/QuizLogo'
-import QuizBackground from '../src/components/QuizBackground'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-
-// const BackgroundImage = styled.div`
-//   background-image: url(${db.bg});
-//   flex: 1;
-//   background-size: cover;
-//   background-position: center;
-// `;
+import Widget from '../src/components/Widget';
+import QuizLogo from '../src/components/QuizLogo';
+import QuizBackground from '../src/components/QuizBackground';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import Head from "next/head";
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -27,9 +21,11 @@ export const QuizContainer = styled.div`
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <head>
+      <Head>
+        <title>Quiz - Agile</title>
+        <meta property="og:locale" content="pt_BR"/>
         <meta property="og:image" content={db.bg}/>
-      </head>
+      </Head>
       <QuizContainer>
         <QuizLogo />
         <Widget>
