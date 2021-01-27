@@ -7,6 +7,8 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Head from "next/head";
 import { useRouter } from 'next/router';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -17,20 +19,6 @@ export const QuizContainer = styled.div`
     margin: auto;
     padding: 15px;
   }
-`;
-
-export const Button = styled.button`
-  /* Adapt the colors based on primary prop */
-  background: ${props => props.primary ? "palevioletred" : "white"};
-  color: ${props => props.primary ? "white" : "palevioletred"};
-
-  width: 100%;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  max-width: 280px;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
 `;
 
 export default function Home() {
@@ -57,20 +45,15 @@ export default function Home() {
               console.log('Fazendo uma submissão por meio do react');
             }}
             >
-            <div>
-              <input
-                onChange={function (infosDoEvento) {
-                  console.log(infosDoEvento.target.value);
-                  // State
-                  // name = infosDoEvento.target.value;
-                  setName(infosDoEvento.target.value);
-                }}
+              <Input
+                name="nomeDoUsuario"
+                onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
                 placeholder="Diz ai seu nome"
+                value={name}
               />
-            </div>
-            <div>
-              <Button type="submit" disabled={name.length === 0}>Jogar {name}</Button>
-            </div>
+              <Button type="submit" disabled={name.length === 0}>
+                {`Jogar ${name}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
