@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -36,9 +37,10 @@ export default function Home() {
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>Agile Quiz</h1>
+            <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
+            <p>{db.description}</p>
             <form onSubmit={function (infosDoEvento) {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
