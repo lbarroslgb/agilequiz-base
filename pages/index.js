@@ -19,10 +19,24 @@ export const QuizContainer = styled.div`
   }
 `;
 
+export const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => props.primary ? "palevioletred" : "white"};
+  color: ${props => props.primary ? "white" : "palevioletred"};
+
+  width: 100%;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  max-width: 280px;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
-  
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
@@ -34,7 +48,7 @@ export default function Home() {
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>The legend of zelda</h1>
+            <h1>Agile Quiz</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={function (infosDoEvento) {
@@ -43,6 +57,7 @@ export default function Home() {
               console.log('Fazendo uma submissão por meio do react');
             }}
             >
+            <div>
               <input
                 onChange={function (infosDoEvento) {
                   console.log(infosDoEvento.target.value);
@@ -52,10 +67,10 @@ export default function Home() {
                 }}
                 placeholder="Diz ai seu nome"
               />
-              <button type="submit" disabled={name.length === 0}>
-                Jogar
-                {name}
-              </button>
+            </div>
+            <div>
+              <Button type="submit" disabled={name.length === 0}>Jogar {name}</Button>
+            </div>
             </form>
           </Widget.Content>
         </Widget>
