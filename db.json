@@ -4,25 +4,39 @@
     "description": "Teste os seus conhecimentos sobre Projetos Ageis",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "image": "https://image.freepik.com/free-vector/marketing-group-working-presentation_1262-19833.jpg",
+        "title": "Tratando-se de Scrum, qual o nome da cerimônia realizada diariamente?",
         "description": "Essa é pra aquecer",
-        "answer": 2,
+        "answer": 0,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Daily Scrum",
+          "Review meeting",
+          "Planning meeting",
+          "Reunião de Retrospectiva"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
+        "image": "https://image.freepik.com/free-vector/group-office-workers-collaborating-tasks_1262-19784.jpg",
+        "title": "Qual das opções abaixo não é um método agil?",
         "description": "Faz tempo em haha",
-        "answer": 0,
+        "answer": 2,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "metodologia Scrum",
+           "Kanban",
+           "Modelo cascata",
+           "eXtreme Programming (XP)"
+        ]
+      },
+      {
+        "image": "https://image.freepik.com/free-vector/marketing-group-working-presentation_1262-19833.jpg",
+        "title": "O que é ser agil?",
+        "description": "Faz tempo em haha",
+        "answer": 3,
+        "alternatives": [
+          "Realizar várias reuniões de levantamento de requisitos, planejar o cronograma de entrega e ter um produto completo o mais rápido possível",
+          "Não fazer reuniões e focar no desenvolvimento para entregar mais rápido",
+          "Priorizar e entregar primeiro os itens de menor valor",  
+          "Priorizar e entregar rapidamente o que dá mais valor"
         ]
       }
     ],
