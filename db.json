@@ -1,5 +1,5 @@
 {
-    "bg": "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
+    "bg": "https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg",
     "title": "Quiz Agile",
     "description": "Teste os seus conhecimentos sobre Projetos Ageis",
     "questions": [
@@ -46,10 +46,10 @@
     ],
     "theme": {
       "colors": {
-        "primary": "#357a38",
-        "secondary": "#007bb2",
+        "primary": "#807F7D",
+        "secondary": "#807F7D",
         "mainBg": "#171B35",
-        "contrastText": "#FFFFFF",
+        "contrastText": "#E4E1CE",
         "wrong": "#FF5722",
         "success": "#4CAF50"
       },
