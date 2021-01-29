@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Head from "next/head";
+import { useRouter } from 'next/router';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
-import Head from "next/head";
-import { useRouter } from 'next/router';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import { motion } from 'framer-motion';
@@ -34,7 +34,7 @@ export default function Home() {
       <Head>
         <title>Quiz - Agile</title>
         <meta property="og:locale" content="pt_BR"/>
-        <meta property="og:image" content={db.bg}/>
+        <meta property="og:image" content={db.bg} />
       </Head>
       <QuizContainer>
         <QuizLogo />
@@ -63,11 +63,11 @@ export default function Home() {
               <Input
                 name="nomeDoUsuario"
                 onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
-                placeholder="Diz ai seu nome"
+                placeholder="Me diga o seu nome"
                 value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
-                {`Jogar ${name}`}
+                {`${name} confirme para iniciar`}
               </Button>
             </form>
           </Widget.Content>

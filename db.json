@@ -1,10 +1,10 @@
 {
-    "bg": "https://www.pixel4k.com/wp-content/uploads/2020/08/green-color-flow-abstract_1596925794.jpg",
+    "bg": "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
     "title": "Quiz Agile",
     "description": "Teste os seus conhecimentos sobre Projetos Ageis",
     "questions": [
       {
-        "image": "https://image.freepik.com/free-vector/marketing-group-working-presentation_1262-19833.jpg",
+        "image": "https://image.freepik.com/free-vector/teem-discussing-project-kanban-board_1262-19963.jpg",
         "title": "Tratando-se de Scrum, qual o nome da cerimônia realizada diariamente?",
         "description": "Essa é pra aquecer",
         "answer": 0,
