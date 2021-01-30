@@ -1,4 +1,4 @@
-# AgileQuiz Base
+# AgileQuiz
 
 > :rocket: Seja bem vindo ao projeto Agile Quiz criado utilizando como base o [AluraQuiz!](https://github.com/alura-challenges/aluraquiz-base) implementado durante o curso IMERSÃO REACT NEXT.JS da Alura.
 
