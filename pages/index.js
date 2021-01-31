@@ -60,8 +60,7 @@ export default function Home() {
           }}
           initial="hidden"
           animate="show"
-        />
-        <Widget>
+        >
           <Widget.Header>
             <h1>{db.title}</h1>
           </Widget.Header>
