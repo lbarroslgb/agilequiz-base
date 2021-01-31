@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Head from "next/head";
+import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
@@ -10,9 +11,7 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
-import { motion } from 'framer-motion';
 import Link from '../src/components/Link';
-
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -33,7 +32,19 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>Quiz - Agile</title>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="title" content={db.title} />
+        <meta name="description" content={db.description} />
+        {/* Open Graph */}
         <meta property="og:locale" content="pt_BR"/>
+        <meta property="og:site_name" content={db.title} />
+        <meta property="og:image" content={db.bg} />
+        {/* Dislplay on Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://agilequiz-base-git-main.lbarroslgb.vercel.app/" />
+        <meta property="og:title" content={db.title} />
+        <meta property="og:description" content={db.description} />
         <meta property="og:image" content={db.bg} />
       </Head>
       <QuizContainer>
