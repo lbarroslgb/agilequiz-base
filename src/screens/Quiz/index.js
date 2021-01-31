@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable func-names */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/prop-types */
 import React from 'react';

@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable react/jsx-filename-extension */
 import styled from 'styled-components';
 
 import React from 'react';

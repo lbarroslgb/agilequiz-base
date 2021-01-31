@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
@@ -32,7 +34,7 @@ export async function getServerSideProps(context) {
         }
         throw new Error('Falha em pegar os dados');
       })
-      .then((respostaConvertidaEmObjeto) => respostaConvertidaEmObjeto)
+      .then((respostaConvertidaEmObjeto) => respostaConvertidaEmObjeto);
       // .catch((err) => {
       //   // console.error(err);
       // });
@@ -44,7 +46,7 @@ export async function getServerSideProps(context) {
         dbExterno,
       },
     };
-  } catch(err) {
+  } catch (err) {
     throw new Error(err);
   }
 }
