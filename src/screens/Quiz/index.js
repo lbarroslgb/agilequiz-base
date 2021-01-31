@@ -1,6 +1,9 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Lottie } from '@crello/react-lottie';
+import { useRouter } from 'next/router';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
@@ -11,40 +14,52 @@ import BackLinkArrow from '../../components/BackLinkArrow';
 import loadingAnimation from './animations/loading.json';
 
 function ResultWidget({ results }) {
+  const { query } = useRouter();
+  const router = useRouter();
   return (
     <Widget>
       <Widget.Header>
-        Tela de Resultado:
+        {query.name}
+        {' '}
+        veja o seu resultado:
       </Widget.Header>
-
       <Widget.Content>
-        <p>
-          Você acertou
-          {' '}
-          {/* {results.reduce((somatoriaAtual, resultAtual) => {
-            const isAcerto = resultAtual === true;
-            if (isAcerto) {
-              return somatoriaAtual + 1;
-            }
-            return somatoriaAtual;
-          }, 0)} */}
-          {results.filter((x) => x).length}
-          {' '}
-          perguntas
-        </p>
-        <ul>
-          {results.map((result, index) => (
-            <li key={`result__${result}`}>
-              #
-              {index + 1}
-              {' '}
-              Resultado:
-              {result === true
-                ? ' Acertou'
-                : ' Errou'}
-            </li>
-          ))}
-        </ul>
+        <form onSubmit={function (infosDoEvento) {
+              infosDoEvento.preventDefault();
+              router.push(`/`);
+            }}
+        >
+          <p>
+            Você acertou
+            {' '}
+            {/* {results.reduce((somatoriaAtual, resultAtual) => {
+              const isAcerto = resultAtual === true;
+              if (isAcerto) {
+                return somatoriaAtual + 1;
+              }
+              return somatoriaAtual;
+            }, 0)} */}
+            {results.filter((x) => x).length}
+            {' '}
+            perguntas
+          </p>
+          <ul>
+            {results.map((result, index) => (
+              <li key={`result__${result}`}>
+                #
+                {index + 1}
+                {' '}
+                Resultado:
+                {result === true
+                  ? ' Acertou'
+                  : ' Errou'}
+              </li>
+            ))}
+          </ul>
+          <Button type="submit">
+            Clique para recomeçar
+          </Button>
+        </form>
       </Widget.Content>
     </Widget>
   );
