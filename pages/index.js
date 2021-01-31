@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
@@ -37,7 +39,7 @@ export default function Home() {
         <meta name="title" content={db.title} />
         <meta name="description" content={db.description} />
         {/* Open Graph */}
-        <meta property="og:locale" content="pt_BR"/>
+        <meta property="og:locale" content="pt_BR" />
         <meta property="og:site_name" content={db.title} />
         <meta property="og:image" content={db.bg} />
         {/* Dislplay on Facebook */}
@@ -58,7 +60,7 @@ export default function Home() {
           }}
           initial="hidden"
           animate="show"
-        ></Widget>
+        />
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
@@ -68,7 +70,6 @@ export default function Home() {
             <form onSubmit={function (infosDoEvento) {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
-              console.log('Fazendo uma submissão por meio do react');
             }}
             >
               <Input
@@ -83,7 +84,6 @@ export default function Home() {
             </form>
           </Widget.Content>
         </Widget>
-        
         <Widget
           as={motion.section}
           transition={{ delay: 0.5, duration: 0.5 }}
@@ -94,10 +94,8 @@ export default function Home() {
           initial="hidden"
           animate="show"
         >
-
-        <Widget.Content>
+          <Widget.Content>
             <h1>Quizes da Galera</h1>
-
             <ul>
               {db.external.map((linkExterno) => {
                 const [projectName, githubUser] = linkExterno
@@ -119,8 +117,8 @@ export default function Home() {
               })}
             </ul>
           </Widget.Content>
-          </Widget>
-          <Footer
+        </Widget>
+        <Footer
           as={motion.footer}
           transition={{ delay: 0.5, duration: 0.5 }}
           variants={{
