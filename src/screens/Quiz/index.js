@@ -25,20 +25,13 @@ function ResultWidget({ results }) {
       </Widget.Header>
       <Widget.Content>
         <form onSubmit={function (infosDoEvento) {
-              infosDoEvento.preventDefault();
-              router.push(`/`);
-            }}
+          infosDoEvento.preventDefault();
+          router.push('/');
+        }}
         >
           <p>
             Você acertou
             {' '}
-            {/* {results.reduce((somatoriaAtual, resultAtual) => {
-              const isAcerto = resultAtual === true;
-              if (isAcerto) {
-                return somatoriaAtual + 1;
-              }
-              return somatoriaAtual;
-            }, 0)} */}
             {results.filter((x) => x).length}
             {' '}
             perguntas

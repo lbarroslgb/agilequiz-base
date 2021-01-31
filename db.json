@@ -18,7 +18,7 @@
       {
         "image": "https://image.freepik.com/free-vector/group-office-workers-collaborating-tasks_1262-19784.jpg",
         "title": "Qual das opções abaixo não é um método agil?",
-        "description": "Faz tempo em haha",
+        "description": "me lembra os tempos de faculdade",
         "answer": 2,
         "alternatives": [
            "metodologia Scrum",
@@ -30,7 +30,7 @@
       {
         "image": "https://image.freepik.com/free-vector/marketing-group-working-presentation_1262-19833.jpg",
         "title": "O que é ser agil?",
-        "description": "Faz tempo em haha",
+        "description": "Dica: pense no cliente",
         "answer": 3,
         "alternatives": [
           "Realizar várias reuniões de levantamento de requisitos, planejar o cronograma de entrega e ter um produto completo o mais rápido possível",
@@ -38,11 +38,25 @@
           "Priorizar e entregar primeiro os itens de menor valor",  
           "Priorizar e entregar rapidamente o que dá mais valor"
         ]
+      },
+      {
+        "image": "https://image.freepik.com/free-vector/teem-discussing-project-kanban-board_1262-19963.jpg",
+        "title": "Qual o objetivo do Kanban?",
+        "description": "Kanban board, muito utilizado!",
+        "answer": 1,
+        "alternatives": [
+          "Permitir que apenas o desenvolvedor visualize sua atividade",
+          "Quadro para organizar atividades e processos de movimentação de materiais e produtos de forma visual",
+          "Representar visualmente apenas as atividades concluídas",  
+          "Exibir graficamente o andamento da equipe em projetos, considerando tempo, esforço e prazo de entrega"
+        ]
       }
     ],
     "external": [
       "https://aluraquiz-css.omariosouto.vercel.app/",
-      "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
+      "https://aluraquiz-devsoutinho.omariosouto.vercel.app/",
+      "https://aluraquiz-tech.pablooks.vercel.app/",
+      "https://aluraquiz-coffee.leonardot07.vercel.app/"
     ],
     "theme": {
       "colors": {
